@@ -58,11 +58,11 @@ const Navbar = () => {
       <div className="navbar-end">
         {
           user? <>
-          <Link to={'/login'} onClick={handleSignOut}>LogOut</Link>
+          <Link to={'/login'} className="btn btn-outline btn-accent rounded-none" onClick={handleSignOut}>LogOut</Link>
           </>
           :
           <>
-            <Link to={'/login'}>LogIn</Link>
+            <Link to={'/login'} className="btn btn-outline btn-accent rounded-none">LogIn</Link>
           </>
         }
       </div>

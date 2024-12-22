@@ -4,7 +4,6 @@ import { FaGoogle } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
-
 const LogIn = () => {
   const {logInForm, loginWithGoogle} = useContext(AuthContext)
   const navigate = useNavigate()

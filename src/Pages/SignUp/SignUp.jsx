@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import register from '../../assets/auth/register.avif'
 import { Link, useNavigate } from 'react-router-dom';
-import { FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import auth from '../../firebase/firebase.config';

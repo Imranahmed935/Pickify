@@ -3,7 +3,7 @@ import React from 'react';
 const RecentAdd = ({recent}) => {
     const { productName, productBrand, recommendationCount, productULR } = recent;
     return (
-        <div className="card card-compact bg-base-100 w-96 border border-[#728181] p-2">
+        <div className="card card-compact transition-all duration-300 hover:scale-105 bg-base-100 w-96 border border-[#728181]">
       <figure>
         <img
         className="w-96 h-60" 

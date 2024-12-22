@@ -10,7 +10,7 @@ const MainLayout = () => {
       <div className="lg:w-9/12 mx-auto">
       <Outlet />
       </div>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   );
 };

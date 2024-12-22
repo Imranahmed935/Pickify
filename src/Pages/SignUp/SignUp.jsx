@@ -1,11 +1,13 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import register from '../../assets/auth/register.avif'
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import auth from '../../firebase/firebase.config';
+import toast from 'react-hot-toast';
 const SignUp = () => {
   const {signUpForm} = useContext(AuthContext)
+  const [error, setError] = useState('');
   const navigate = useNavigate();
     const handleSignUpForm = (e)=>{
         e.preventDefault();
@@ -14,20 +16,20 @@ const SignUp = () => {
         const photo = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
-        const formData = {name, photo, email, password}
-        console.log(formData)
         signUpForm(email, password)
         .then(result =>{
           console.log(result.user)
+          toast.success('signup successful')
           navigate('/')
           const data = {
             displayName:name,
             photoURL:photo
           }
           updateProfile(auth.currentUser, data)
+          toast.success('Profile Updated Successfully!');
         })
-        .catch(err=>{
-          console.log('hello--', err)
+        .catch(error=>{
+          setError(error.message);
         })
     }
     return (
@@ -63,6 +65,7 @@ const SignUp = () => {
                 </label>
                 <input type="password" name='password' placeholder="password" className="input input-bordered" required />
               </div>
+              <p className='text-red-500'>{error}</p>
               <div className="form-control mt-6">
                 <button className="btn btn-info">SignUp</button>
               </div>

@@ -4,7 +4,6 @@ import AllQueries from '../../Components/AllQueries/AllQueries';
 
 const Queries = () => {
     const [queries, setQueries] = useState([]);
-    console.log(queries)
     useEffect(()=>{
         const allQueries = async()=>{
             try{

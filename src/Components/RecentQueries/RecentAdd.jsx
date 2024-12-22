@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-const AllQueries = ({ query }) => {
-  const { productName, productBrand, recommendationCount, productULR } = query;
-  return (
-    <div className="card card-compact bg-base-100 w-96 border border-[#728181] p-2">
+const RecentAdd = ({recent}) => {
+    const { productName, productBrand, recommendationCount, productULR } = recent;
+    return (
+        <div className="card card-compact bg-base-100 w-96 border border-[#728181] p-2">
       <figure>
         <img
         className="w-96 h-60" 
@@ -24,7 +24,7 @@ const AllQueries = ({ query }) => {
         </div>
       </div>
     </div>
-  );
+    );
 };
 
-export default AllQueries;
+export default RecentAdd;

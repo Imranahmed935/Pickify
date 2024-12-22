@@ -6,6 +6,7 @@ import LogIn from "../Pages/LogIn/LogIn";
 import SignUp from "../Pages/SignUp/SignUp";
 import AddQueries from "../Pages/AddQueries/AddQueries";
 import Queries from "../Pages/Queries/Queries";
+import MyQueries from "../Pages/MyQueries/MyQueries";
 
 const router = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
             {
                 path:'/queries',
                 element:<Queries/>
+            },
+            {
+                path:'/myQueries',
+                element:<MyQueries/>
             }
         ]
     }

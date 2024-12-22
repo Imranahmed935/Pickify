@@ -12,6 +12,9 @@ const Navbar = () => {
       <li>
         <Link to={'/addQueries'}>Add Queries</Link>
       </li>
+      <li>
+        <Link to={'/queries'}>Queries</Link>
+      </li>
     </>
   );
 

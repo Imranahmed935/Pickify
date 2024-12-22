@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
+import axios from 'axios';
+import toast from 'react-hot-toast';
 
 const AddQueries = () => {
     const {user} = useContext(AuthContext)
@@ -16,9 +18,15 @@ const AddQueries = () => {
         const userPhoto = user?.photoURL;
         const currentDate = new Date().toLocaleString();
         const recommendationCount = 0;
-
         const addQueriesData = {productName, productBrand, productULR, queryTitle, boycott, userName, userEmail, userPhoto, currentDate, recommendationCount}
         console.log(addQueriesData)
+
+        axios.post('http://localhost:5000/allQueries', addQueriesData)
+        .then(res => {
+            if(res.data.insertedId){
+                toast.success('Query added successfully.')
+            }
+        })
     }
     return (
         <div className="min-h-screen flex justify-center items-center bg-gray-100">

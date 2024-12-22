@@ -5,6 +5,7 @@ import Home from "../Pages/Home/Home";
 import LogIn from "../Pages/LogIn/LogIn";
 import SignUp from "../Pages/SignUp/SignUp";
 import AddQueries from "../Pages/AddQueries/AddQueries";
+import Queries from "../Pages/Queries/Queries";
 
 const router = createBrowserRouter([
     {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
             {
                 path:'/addQueries',
                 element:<AddQueries/>
+            },
+            {
+                path:'/queries',
+                element:<Queries/>
             }
         ]
     }

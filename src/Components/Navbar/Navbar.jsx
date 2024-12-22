@@ -9,6 +9,9 @@ const Navbar = () => {
       <li>
         <Link to={'/'}>home</Link>
       </li>
+      <li>
+        <Link to={'/addQueries'}>Add Queries</Link>
+      </li>
     </>
   );
 
@@ -48,7 +51,7 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <Link>Pickify</Link>
+        <Link to={'/'} className="text-2xl font-bold">Pickify</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">

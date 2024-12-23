@@ -4,7 +4,6 @@ import RecentAdd from './RecentAdd';
 
 const RecentQueries = () => {
     const [recentQueries, setRecentQueries] = useState([]);
-    console.log(recentQueries)
     useEffect(()=>{
         const allQueries = async()=>{
             try{

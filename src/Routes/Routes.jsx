@@ -36,7 +36,7 @@ const router = createBrowserRouter([
             },
             {
                 path:'/myQueries',
-                element:<MyQueries/>
+                element:<MyQueries/>,
             }
         ]
     }

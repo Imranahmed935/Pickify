@@ -72,9 +72,9 @@ const MyQueries = () => {
               </p>
               <div className="card-actions justify-center ">
                 <Link to={`/Queries_Details/${queries._id}`}>
-                  <button className="btn bg-[#c3c9c9]">view Details</button>{" "}
+                  <button className="btn bg-[#c3c9c9]">view Details</button>
                 </Link>
-                <button className="btn bg-[#c3c9c9]">update</button>
+                <Link to={`/update-queries/${queries._id}`}>  <button className="btn bg-[#c3c9c9]">update</button></Link>
                 <button
                   onClick={() => handleDelete(queries._id)}
                   className="btn bg-[#c3c9c9]"

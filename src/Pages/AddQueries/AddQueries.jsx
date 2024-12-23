@@ -95,62 +95,6 @@ const AddQueries = () => {
                             required
                         ></textarea>
                     </div>
-                    {/* <div className="form-control">
-                        <label className="label font-medium text-gray-700">
-                            User Email
-                        </label>
-                        <input
-                            type="email"
-                            placeholder="Enter your email"
-                            className="input input-bordered w-full"
-                            required
-                        />
-                    </div>
-                    <div className="form-control">
-                        <label className="label font-medium text-gray-700">
-                            User Name
-                        </label>
-                        <input
-                            type="text"
-                            placeholder="Enter your name"
-                            className="input input-bordered w-full"
-                            required
-                        />
-                    </div>
-                    <div className="form-control">
-                        <label className="label font-medium text-gray-700">
-                            User Profile Image URL
-                        </label>
-                        <input
-                            type="url"
-                            placeholder="Enter profile image URL"
-                            className="input input-bordered w-full"
-                            required
-                        />
-                    </div>
-                    <div className="form-control">
-                        <label className="label font-medium text-gray-700">
-                            Current Date and Time
-                        </label>
-                        <input
-                            type="text"
-                            value={new Date().toLocaleString()}
-                            readOnly
-                            className="input input-bordered w-full bg-gray-200"
-                        />
-                    </div>
-                    <div className="form-control md:col-span-2">
-                        <label className="label font-medium text-gray-700">
-                            Recommendation Count
-                        </label>
-                        <input
-                            type="number"
-                            value="0"
-                            readOnly
-                            className="input input-bordered w-full bg-gray-200"
-                        />
-                    </div> */}
-                    {/* Add Query Button */}
                     <div className="form-control md:col-span-2 mt-4">
                         <button type="submit" className="btn btn-primary w-full">
                             Add Query

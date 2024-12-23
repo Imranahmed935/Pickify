@@ -8,6 +8,7 @@ import AddQueries from "../Pages/AddQueries/AddQueries";
 import Queries from "../Pages/Queries/Queries";
 import MyQueries from "../Pages/MyQueries/MyQueries";
 import QueriesDetails from "../Components/QueriesDetails/QueriesDetails";
+import UpdateQueries from "../Components/UpdateQueries/UpdateQueries";
 
 const router = createBrowserRouter([
     {
@@ -43,6 +44,11 @@ const router = createBrowserRouter([
                 path:'/Queries_Details/:id',
                 element:<QueriesDetails/>,
                 loader:({params})=> fetch(`http://localhost:5000/queries-details/${params.id}`)
+            },
+            {
+                path:'/update-queries/:id',
+                element:<UpdateQueries/>,
+                loader:({params})=>fetch(`http://localhost:5000/update/${params.id}`)
             }
         ]
     }

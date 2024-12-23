@@ -30,8 +30,8 @@ const AddQueries = () => {
     }
     return (
         <div className="min-h-screen flex justify-center items-center bg-gray-100">
-            <div className="card w-full max-w-5xl bg-white shadow-lg p-8 rounded-lg">
-                <h2 className="text-4xl font-bold mb-6 text-center text-gray-800">
+            <div className="card w-full max-w-5xl bg-white shadow-lg p-4 rounded-lg">
+                <h2 className="text-2xl font-bold mb-6 text-[#728181]">
                     Add Your Query
                 </h2>
                 <form onSubmit={handleAddQueriesForm} className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -96,7 +96,7 @@ const AddQueries = () => {
                         ></textarea>
                     </div>
                     <div className="form-control md:col-span-2 mt-4">
-                        <button type="submit" className="btn btn-primary w-full">
+                        <button type="submit" className="btn bg-[#82A09E] text-xl w-full">
                             Add Query
                         </button>
                     </div>

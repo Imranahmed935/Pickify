@@ -18,6 +18,12 @@ const Navbar = () => {
       <li>
         <Link to={'/myQueries'}>My Queries</Link>
       </li>
+      <li>
+        <Link to={'/recommendationMe'}>Recommendation for Me</Link>
+      </li>
+      <li>
+        <Link to={'/MyRecommendation'}>My Recommendation</Link>
+      </li>
     </>
   );
 
@@ -57,7 +63,7 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <Link to={'/'} className="text-2xl text-[#728181] font-bold">Pickify</Link>
+        <Link to={'/'} className="lg:text-3xl text-2xl text-[#728181] font-bold">P<span className="text-purple-600">i</span>ck<span className="text-purple-600">i</span>fy</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -66,9 +72,10 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         {
-          user? <>
+          user? <div className="flex gap-3 items-center">
+          <img className="w-10 h-10 rounded-full" src={user?.photoURL} alt="" />
           <Link to={'/login'} className="btn btn-outline btn-accent rounded-none" onClick={handleSignOut}>LogOut</Link>
-          </>
+          </div>
           :
           <>
             <Link to={'/login'} className="btn btn-outline btn-accent rounded-none">LogIn</Link>

@@ -3,6 +3,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import QueryBanner from "../../Components/QueryBanner/QueryBanner";
 
 const MyQueries = () => {
   const { user } = useContext(AuthContext);
@@ -49,6 +50,9 @@ const MyQueries = () => {
 
   return (
     <div>
+      <div>
+        <QueryBanner/>
+      </div>
       <h1 className="text-2xl mt-10 font-bold text-[#728181]">My Queries</h1>
       <div className="lg:w-10/12 mx-auto px-2 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {myQueries.map((queries) => (

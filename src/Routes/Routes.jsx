@@ -7,6 +7,7 @@ import SignUp from "../Pages/SignUp/SignUp";
 import AddQueries from "../Pages/AddQueries/AddQueries";
 import Queries from "../Pages/Queries/Queries";
 import MyQueries from "../Pages/MyQueries/MyQueries";
+import QueriesDetails from "../Components/QueriesDetails/QueriesDetails";
 
 const router = createBrowserRouter([
     {
@@ -37,6 +38,11 @@ const router = createBrowserRouter([
             {
                 path:'/myQueries',
                 element:<MyQueries/>,
+            },
+            {
+                path:'/Queries_Details/:id',
+                element:<QueriesDetails/>,
+                loader:({params})=> fetch(`http://localhost:5000/queries-details/${params.id}`)
             }
         ]
     }

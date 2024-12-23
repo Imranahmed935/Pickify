@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
+import Recommendation from "../Recommendation/Recommendation";
 
 const QueriesDetails = () => {
   const detailsData = useLoaderData();
@@ -66,6 +67,9 @@ const QueriesDetails = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        <Recommendation detailsData={detailsData}/>
       </div>
     </div>
   );

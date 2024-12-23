@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "../../assets/slider/organic.png";
+import banner from "../../assets/banner/organic.png";
 import { Link } from "react-router-dom";
 
 const QueryBanner = () => {

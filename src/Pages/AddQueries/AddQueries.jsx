@@ -19,12 +19,12 @@ const AddQueries = () => {
         const currentDate = new Date().toLocaleString();
         const recommendationCount = 0;
         const addQueriesData = {productName, productBrand, productULR, queryTitle, boycott, userName, userEmail, userPhoto, currentDate, recommendationCount}
-        console.log(addQueriesData)
 
         axios.post('http://localhost:5000/allQueries', addQueriesData)
         .then(res => {
             if(res.data.insertedId){
                 toast.success('Query added successfully.')
+                form.reset();
             }
         })
     }

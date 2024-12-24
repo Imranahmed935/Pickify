@@ -45,6 +45,9 @@ const AllRecommendation = ({ detailsData }) => {
                   </p>
                 </div>
 
+                <p className="text-gray-800">
+                    {recommend.recommenderEmail}
+                  </p>
                 <p className="text-gray-700 mt-1">
                   <span className="font-medium">Reason:</span>{" "}
                   {recommend.recommendationReason}

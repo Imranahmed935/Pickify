@@ -1,7 +1,7 @@
 # **Pickify**
 
 **Personalized Product Recommendation System**  
-[Visit Live Site](https://pickify-live-site-url.com)
+[Visit Live Site](https://dazzling-horse-41d2d8.netlify.app)
 
 ---
 

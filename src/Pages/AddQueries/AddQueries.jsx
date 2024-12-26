@@ -20,7 +20,7 @@ const AddQueries = () => {
         const recommendationCount = 0;
         const addQueriesData = {productName, productBrand, productULR, queryTitle, boycott, userName, userEmail, userPhoto, currentDate, recommendationCount}
 
-        axios.post('http://localhost:5000/allQueries', addQueriesData, {withCredentials:true})
+        axios.post('https://pickify-server.vercel.app/allQueries', addQueriesData, {withCredentials:true})
         .then(res => {
             if(res.data.insertedId){
                 toast.success('Query added successfully.')

@@ -13,7 +13,7 @@ const Queries = () => {
     const allQueries = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:5000/allQueries?search=${search}`
+          `https://pickify-server.vercel.app/allQueries?search=${search}`
         );
         setQueries(data);
       } catch (err) {

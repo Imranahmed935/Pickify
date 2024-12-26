@@ -10,7 +10,7 @@ const RecentQueries = () => {
     const allQueries = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:5000/recent-Queries"
+          "https://pickify-server.vercel.app/recent-Queries"
         );
         setRecentQueries(data);
       } catch (err) {

@@ -17,7 +17,7 @@ const UpdateQueries = () => {
     const boycott = form.boycott.value;
     const data = { productBrand, productName, productULR, queryTitle, boycott };
     
-    axios.put(`http://localhost:5000/update/${_id}`, data)
+    axios.put(`https://pickify-server.vercel.app/update/${_id}`, data)
       .then((res) => {
         console.log(res.data);
       });

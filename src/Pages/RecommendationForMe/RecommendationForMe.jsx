@@ -9,7 +9,7 @@ const RecommendationsForMe = () => {
     const allMyQueries = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:5000/recommendation-for-me/${user?.email}`
+          `https://pickify-server.vercel.app/recommendation-for-me/${user?.email}`
         );
         setRecommendationsForMe(data);
       } catch (err) {

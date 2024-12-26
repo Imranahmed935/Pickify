@@ -40,10 +40,10 @@ const AuthProvider = ({ children }) => {
       setUser(currentUser);
       if(currentUser?.email){
         const user = {userEmail: currentUser.email}
-        axios.post('http://localhost:5000/jwt', user, {withCredentials:true})
+        axios.post('https://pickify-server.vercel.app/jwt', user, {withCredentials:true})
         setLoading(false);
       }else{
-        axios.post('http://localhost:5000/logout', {}, {withCredentials:true})
+        axios.post('https://pickify-server.vercel.app/logout', {}, {withCredentials:true})
         setLoading(false);
       }
     });

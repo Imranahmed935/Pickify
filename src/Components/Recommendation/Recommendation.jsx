@@ -33,7 +33,7 @@ const Recommendation = ({detailsData}) => {
       userName,
       userEmail
     };
-   axios.post('http://localhost:5000/recommendationQuery', recommendationData)
+   axios.post('https://pickify-server.vercel.app/recommendationQuery', recommendationData)
    .then(res =>{
     if(res.data.insertedId){
         toast.success('recommendation added successfully.')

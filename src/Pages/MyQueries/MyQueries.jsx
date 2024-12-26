@@ -13,7 +13,7 @@ const MyQueries = () => {
     const allMyQueries = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:5000/my-queries/${user?.email}`, {withCredentials:true}
+          `https://pickify-server.vercel.app/my-queries/${user?.email}`, {withCredentials:true}
         );
         setMyQueries(data);
       } catch (err) {
@@ -34,7 +34,7 @@ const MyQueries = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`http://localhost:5000/delete-queries/queries/${_id}`,).then((res) => {
+        axios.delete(`https://pickify-server.vercel.app/delete-queries/queries/${_id}`,).then((res) => {
           if (res.data.deletedCount > 0) {
             setMyQueries(data => data.filter(d => d._id !== _id));
             Swal.fire(

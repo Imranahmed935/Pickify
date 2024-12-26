@@ -10,7 +10,7 @@ const AllRecommendation = ({ detailsData }) => {
     const fetchRecommendations = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:5000/all-recommendations?query_id=${query_id}`
+          `https://pickify-server.vercel.app/all-recommendations?query_id=${query_id}`
         );
         setAllRecommendations(data);
       } catch (error) {

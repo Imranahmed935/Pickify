@@ -55,12 +55,12 @@ const router = createBrowserRouter([
             {
                 path:'/Queries_Details/:id',
                 element:<QueriesDetails/>,
-                loader:({params})=> fetch(`http://localhost:5000/queries-details/${params.id}`)
+                loader:({params})=> fetch(`https://pickify-server.vercel.app/queries-details/${params.id}`)
             },
             {
                 path:'/update-queries/:id',
                 element:<UpdateQueries/>,
-                loader:({params})=>fetch(`http://localhost:5000/update/${params.id}`)
+                loader:({params})=>fetch(`https://pickify-server.vercel.app/update/${params.id}`)
             }
         ]
     }

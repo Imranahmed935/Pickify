@@ -11,7 +11,7 @@ const MyRecommendation = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/my-recommendation/${user?.email}`)
+      .get(`https://pickify-server.vercel.app/my-recommendation/${user?.email}`)
       .then((res) => {
         setRecommendations(res.data);
       })
@@ -33,7 +33,7 @@ const MyRecommendation = () => {
       if (result.isConfirmed) {
         axios
           .delete(
-            `http://localhost:5000/delete-recommendation/${id}/${query_id}`
+            `https://pickify-server.vercel.app/delete-recommendation/${id}/${query_id}`
           )
           .then((res) => {
             if (res.data.result.deletedCount > 0) {

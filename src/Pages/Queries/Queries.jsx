@@ -1,16 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import AllQueries from "../../Components/AllQueries/AllQueries";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Queries = () => {
   const [queries, setQueries] = useState([]);
-  const [search, setSearch] = useState('');
-  const [gridCols, setGridCols] = useState('lg:grid-cols-3'); 
+  const [search, setSearch] = useState("");
+  const [gridCols, setGridCols] = useState("lg:grid-cols-3");
+  const { loading } = useContext(AuthContext);
 
   useEffect(() => {
     const allQueries = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:5000/allQueries?search=${search}`);
+        const { data } = await axios.get(
+          `http://localhost:5000/allQueries?search=${search}`
+        );
         setQueries(data);
       } catch (err) {
         console.log(err);
@@ -20,17 +24,21 @@ const Queries = () => {
   }, [search]);
 
   const toggleLayout = () => {
-    setGridCols((prev) => 
-      prev === 'lg:grid-cols-3' ? 'lg:grid-cols-2 lg:w-7/12' : 'lg:grid-cols-3'
+    setGridCols((prev) =>
+      prev === "lg:grid-cols-3" ? "lg:grid-cols-2 lg:w-7/12" : "lg:grid-cols-3"
     );
   };
 
+  if (loading) {
+    return (
+      <span className="loading loading-spinner text-success relative top-52 ml-[650px] "></span>
+    );
+  }
+
   return (
-    <div>
+    <div className="lg:w-9/12 mx-auto">
       <div className="lg:flex items-center gap-52 mt-10">
-        <h1 className="text-2xl font-bold text-[#728181] ml-36">
-          All Queries
-        </h1>
+        <h1 className="text-2xl font-bold text-[#004581] ml-36">All Queries</h1>
 
         <div className="relative lg:w-1/3 w-full group">
           <input
@@ -54,13 +62,18 @@ const Queries = () => {
         </div>
         <div className="flex gap-2 items-center mt-2">
           <p className="text-[#728181] font-bold">Change Layout</p>
-          <button onClick={toggleLayout} className="btn btn-neutral font-bold">2</button>
-          <button onClick={toggleLayout} className="btn btn-neutral font-bold">3</button>
+          <button onClick={toggleLayout} className="btn bg-[#004581] text-white font-bold">
+            2
+          </button>
+          <button onClick={toggleLayout} className="btn bg-[#004581] text-white font-bold">
+            3
+          </button>
         </div>
       </div>
 
-      
-      <div className={`lg:w-10/12 mx-auto px-2 py-10 grid grid-cols-1 md:grid-cols-2 ${gridCols} gap-10`}>
+      <div
+        className={`lg:w-10/12 mx-auto px-2 py-10 grid grid-cols-1 md:grid-cols-2 ${gridCols} gap-10`}
+      >
         {queries.map((query) => (
           <AllQueries key={query._id} query={query}></AllQueries>
         ))}

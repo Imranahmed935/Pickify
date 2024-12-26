@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import register from '../../assets/auth/register.avif'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import auth from '../../firebase/firebase.config';
@@ -9,6 +9,7 @@ const SignUp = () => {
   const {signUpForm} = useContext(AuthContext)
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  const location = useLocation()
     const handleSignUpForm = (e)=>{
         e.preventDefault();
         const form = e.target;
@@ -20,7 +21,7 @@ const SignUp = () => {
         .then(result =>{
           console.log(result.user)
           toast.success('signup successful')
-          navigate('/')
+          navigate(location.state ? location.state : '/');
           const data = {
             displayName:name,
             photoURL:photo

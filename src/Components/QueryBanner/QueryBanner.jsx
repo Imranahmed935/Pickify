@@ -13,7 +13,7 @@ const QueryBanner = () => {
           Explore top recommendations tailored to your needs. Whether it's for
           daily essentials or exclusive finds, we’ve got you covered!
         </p>
-        <Link to={'/addQueries'}><button className="btn bg-orange-400 hover:text-black text-white font-bold py-3 px-8 rounded-full">
+        <Link to={'/addQueries'}><button className="btn bg-[#004581] hover:text-black text-white border-none font-bold py-3 px-8 rounded-full">
           Add Queries
         </button></Link>
       </div>

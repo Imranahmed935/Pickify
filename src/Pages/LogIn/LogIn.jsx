@@ -1,18 +1,19 @@
 import React, { useContext, useState } from "react";
-import login from '../../assets/auth/login.avif';
+import login from "../../assets/auth/login.avif";
 import { FaGoogle } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import toast from "react-hot-toast";
 
 const LogIn = () => {
   const { logInForm, loginWithGoogle } = useContext(AuthContext);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLogInForm = (e) => {
     e.preventDefault();
-    setError(''); 
+    setError("");
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
@@ -20,8 +21,8 @@ const LogIn = () => {
     logInForm(email, password)
       .then((result) => {
         console.log(result.user);
-        toast.success('login successful')
-        navigate('/');
+        toast.success("login successful");
+        navigate(location.state ? location.state : '/');
       })
       .catch((err) => {
         setError(err.message);
@@ -32,7 +33,7 @@ const LogIn = () => {
     loginWithGoogle()
       .then((result) => {
         console.log(result.user);
-        navigate('/');
+        navigate(location.state ? location.state : "/");
       })
       .catch((err) => {
         setError(err.message);

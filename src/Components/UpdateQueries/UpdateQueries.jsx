@@ -24,7 +24,7 @@ const UpdateQueries = () => {
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-gray-100">
+    <div className="min-h-screen lg:w-9/12 mx-auto flex justify-center items-center bg-gray-100">
       <div className="card w-full max-w-5xl bg-white shadow-lg p-8 rounded-lg">
         <h2 className="text-2xl font-bold mb-6 text-[#728181]">Update Query</h2>
         <form

@@ -7,8 +7,10 @@ import Trend from '../../Components/Trend/Trend';
 
 const Home = () => {
     return (
-        <div>
+        <div >
+           <div className='bg-[#f0faf9]'>
            <Banner/>
+           </div>
            <RecentQueries/>
            <ProductVariation/>
            <Trend/>

@@ -13,7 +13,7 @@ const Trend = () => {
   const images = [img1, img2, img3, img4, img5, img6, img7, img8];
 
   return (
-    <div className="mt-10 px-4">
+    <div className="mt-10 px-4 lg:w-9/12 mx-auto">
       <h1 className="text-2xl font-bold text-[#728181] mb-6">
         Trending Now
       </h1>

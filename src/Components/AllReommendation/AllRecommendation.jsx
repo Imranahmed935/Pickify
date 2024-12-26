@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 const AllRecommendation = ({ detailsData }) => {
   const { _id: query_id } = detailsData;
@@ -13,7 +14,7 @@ const AllRecommendation = ({ detailsData }) => {
         );
         setAllRecommendations(data);
       } catch (error) {
-        console.error("Error fetching recommendations:", error);
+        toast.error("Error fetching recommendations:", error);
       }
     };
     fetchRecommendations();

@@ -21,7 +21,7 @@ const RecentAdd = ({ recent }) => {
         </p>
         <div className="card-actions justify-end">
           <Link to={`/Queries_Details/${_id}`}>
-            <button className="btn bg-[#c3c9c9]">Recommended</button>
+            <button className="btn bg-[#004581] text-white hover:text-[#004581]">Recommended</button>
           </Link>
         </div>
       </div>

@@ -1,6 +1,6 @@
 # **Pickify**
 
-**Your Personalized Product Recommendation System**  
+**Personalized Product Recommendation System**  
 [Visit Live Site](https://pickify-live-site-url.com)
 
 ---

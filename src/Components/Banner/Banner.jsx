@@ -10,7 +10,7 @@ import pic3 from '../../assets/slider/pic6.avif'
 import pic4 from '../../assets/slider/pic1.jpg'
 const Banner = () => {
     return (
-        <div className="w-full lg:h-[500px] px-2">
+        <div className="w-full lg:w-9/12 mx-auto mb-10 lg:h-[500px] px-2">
             <Swiper
                 modules={[EffectFade, Navigation, Autoplay]}
                 effect="fade"

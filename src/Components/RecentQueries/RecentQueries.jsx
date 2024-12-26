@@ -28,7 +28,7 @@ const RecentQueries = () => {
 
   return (
     <div className="lg:w-9/12 mx-auto">
-      <h1 className=" text-2xl mt-10 font-bold text-[#728181]">
+      <h1 className=" text-2xl mt-10 font-bold text-[#004581]">
         Recent Queries
       </h1>
       <div className="lg:w-10/12 mx-auto px-2 py-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">

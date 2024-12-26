@@ -42,7 +42,7 @@ const Recommendation = ({detailsData}) => {
   };
   return (
     <div className="p-6 bg-gray-100 rounded-lg shadow-md mt-20">
-      <h2 className="text-2xl font-bold mb-4">Add A Recommendation</h2>
+      <h2 className="text-2xl font-bold text-[#004581] mb-4">Add A Recommendation</h2>
       <form onSubmit={handleRecommendation} className="space-y-4">
         <div className="form-control">
           <label className="label font-medium text-gray-700">
@@ -92,7 +92,7 @@ const Recommendation = ({detailsData}) => {
             required
           ></textarea>
         </div>
-        <button type="submit" className="btn btn-primary w-full">
+        <button type="submit" className="btn bg-[#004581] text-white hover:text-[#004581] w-full">
           Add Recommendation
         </button>
       </form>

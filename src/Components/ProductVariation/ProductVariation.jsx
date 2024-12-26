@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const ProductVariation = () => {
   return (
     <div className="lg:w-9/12 mx-auto">
-      <h1 className="text-2xl mt-10 font-bold text-[#728181]">
+      <h1 className="text-2xl mt-10 font-bold text-[#004581]">
         Product Variations
       </h1>
       <div className="mt-10 flex flex-col lg:flex-row items-center bg-gradient-to-r from-[#fcfcfc] to-[#84a2a0] lg:text-white text-black p-8 lg:p-10 gap-8 lg:gap-12">
@@ -27,7 +27,7 @@ const ProductVariation = () => {
             need—perfect for inspiring, informing, and captivating your audience
             effortlessly.
           </p>
-          <Link to={'/queries'}><button className="px-6 py-3 mt-4 bg-[#004581] text-white rounded-full font-bold  hover:text-black shadow-lg hover:bg-gray-200 transition duration-300">
+          <Link to={'/addQueries'}><button className="px-6 py-3 mt-4 bg-[#004581] text-white rounded-full font-bold  hover:text-black shadow-lg hover:bg-gray-200 transition duration-300">
             Add Queries
           </button></Link>
         </div>

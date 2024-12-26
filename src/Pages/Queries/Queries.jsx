@@ -31,7 +31,7 @@ const Queries = () => {
 
   if (loading) {
     return (
-      <span className="loading loading-spinner text-success relative top-52 ml-[650px] "></span>
+      <span className="loading loading-spinner text-success relative top-52 ml-[900px] "></span>
     );
   }
 

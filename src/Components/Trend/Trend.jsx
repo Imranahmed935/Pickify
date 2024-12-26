@@ -14,7 +14,7 @@ const Trend = () => {
 
   return (
     <div className="mt-10 px-4 lg:w-9/12 mx-auto">
-      <h1 className="text-2xl font-bold text-[#728181] mb-6">
+      <h1 className="text-2xl font-bold text-[#004581] mb-6">
         Trending Now
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

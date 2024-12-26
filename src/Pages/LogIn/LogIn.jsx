@@ -20,7 +20,6 @@ const LogIn = () => {
 
     logInForm(email, password)
       .then((result) => {
-        console.log(result.user);
         toast.success("login successful");
         navigate(location.state ? location.state : '/');
       })
@@ -32,7 +31,6 @@ const LogIn = () => {
   const handleGoogle = () => {
     loginWithGoogle()
       .then((result) => {
-        console.log(result.user);
         navigate(location.state ? location.state : "/");
       })
       .catch((err) => {

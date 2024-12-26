@@ -22,7 +22,7 @@ const AllRecommendation = ({ detailsData }) => {
 
   return (
     <div className="mt-32">
-      <h1 className="text-2xl mt-10 font-bold text-[#728181]">
+      <h1 className="text-2xl mt-10 font-bold text-[#004581]">
         All Recommendations
       </h1>
       <div className="mt-5 space-y-4">

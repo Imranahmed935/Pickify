@@ -21,7 +21,7 @@ const QueriesDetails = () => {
 
   return (
     <div className="p-8 bg-gray-50 min-h-screen lg:w-9/12 mx-auto ">
-      <h1 className="text-3xl font-bold mb-8 text-[#728181]">Query Details</h1>
+      <h1 className="text-2xl font-bold mb-8 text-[#004581]">Query Details</h1>
 
       <div className="bg-white border rounded-lg overflow-hidden border-[#92a4a4] flex flex-col md:flex-row">
         <div className="w-full md:w-1/2">

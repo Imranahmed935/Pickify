@@ -3,7 +3,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import axios from "axios";
 
 const RecommendationsForMe = () => {
-  const { user } = useContext(AuthContext);
+  const { user, loading } = useContext(AuthContext);
   const [RecommendationsForMe, setRecommendationsForMe] = useState([]);
   useEffect(() => {
     const allMyQueries = async () => {
@@ -19,6 +19,11 @@ const RecommendationsForMe = () => {
     allMyQueries();
   }, [user]);
 
+  if (loading) {
+    return (
+      <span className="loading loading-spinner text-success relative top-52 ml-[900px] "></span>
+    );
+  }
   return (
     <div className="p-6 lg:w-9/12 mx-auto min-h-screen">
       <h1 className="text-2xl font-semibold text-[#004581] mb-6">
@@ -46,7 +51,11 @@ const RecommendationsForMe = () => {
             {RecommendationsForMe.map((rec) => (
               <tr key={rec._id} className="border-b hover:bg-gray-100">
                 <td className="py-4 px-6 border-b">
-                  <img className="w-16 h-16" src={rec.recommendedProductImage} alt="" />
+                  <img
+                    className="w-16 h-16"
+                    src={rec.recommendedProductImage}
+                    alt=""
+                  />
                 </td>
                 <td className="py-4 px-6 border-b">
                   {rec.recommendationTitle}
